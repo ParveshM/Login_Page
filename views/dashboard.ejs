@@ -1,0 +1,12 @@
+<%-include('header')-%>
+  
+    <div class="text-center center-div py-5 mt-5">
+        <div class="border py-5 px-3 mx-auto" style="max-width: 400px;">
+            <h3>Welcome to Express Dashboard</h3>
+            <h4><%= locals.user ? user : "User" %></h4>
+            <a href="/route/logout">Logout</a>
+        </div>
+    </div>
+</div>
+
+    <%-include('footer')-%>

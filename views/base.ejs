@@ -1,0 +1,41 @@
+<%- include('header') -%>
+
+    <div class="container mt-5">
+        <div class="text-center center-div py-5" id="login">
+            <div class="border py-5 px-3 mx-auto" style="max-width: 400px;">
+                <div class="title pb-3">
+                    <h2 class="font-weight-bold">Login System</h2>
+                    <span>Log in for existing users</span>
+                </div>
+                <form action="/route/login" method="POST" class="pt-3 ">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" name="email" required>
+                        <small class="form-text text-muted text-left">Registered email address</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary rounded-pill">Submit</button>
+                </form>
+
+                <% if (locals.logout) { %>
+                    <div class="alert-success text-center mt-3" id="alert">
+                        <%= logout %>
+                    </div>
+                    <% } %>
+
+                        <% if (locals.invalid) { %>
+                            <div class="alert-danger text-center mt-3" id="alert">
+                                <%= invalid %>
+                            </div>
+                            <% } %>
+            </div>
+        </div>
+        <script>
+            setTimeout(() => {
+                document.getElementById("alert").style.display = "none"
+            },3000);
+        </script>
+    
+
+        <%-include('footer')-%>

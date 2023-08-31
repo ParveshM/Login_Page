@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url('assets/rm222-mind-31.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
